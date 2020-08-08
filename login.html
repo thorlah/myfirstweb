@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Using Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="bg-danger">This is my div</div>
+    <div class="bg-success">This is my div</div>
+    <div class="bg-primary">This is my div</div>
+    <div class="bg-info">This is my div</div>
+    <div class="bg-warning">This is my div</div>
+    <div class="bg-dark">This is my div</div>
+    <div class="bg-light">This is my div</div>
+    <div class="bg-default">This is my div</div>
+	
+	
+	<div class="mx-3 mt-5 border border-info p-4 rounded-top">
+	<p class="h3 text-center alert alert-info"><span class="text-info">Login </span><span class="text-success">here</span></p>
+		<form>
+			<div class="form-goup mb-3 mx-4">
+				<label>Username:</label>
+				<input class="form-control" type="text" placeholder="username" id="username"/>
+			</div>
+			<div class="form-goup mb-3 mx-4">
+				<label>Email:</label>
+				<input class="form-control" type="text" placeholder="Email" id ="email"/>
+			</div>
+			<div class="form-goup  mx-4">
+				<label>Password:</label>
+				<input class="form-control" type="password" placeholder="Password" id="password"/>
+			</div>
+			<div class="form-goup  mx-4">
+				<button id="loginbutton" style="border-radius:10px" class="text-default btn btn-info form-control" type="button">Login</button>
+					
+			</div>
+		</form>
+		<table class="table table-bordered table-hover table-striped" id="mytable">
+			<tr>
+				<th>S/N</th>
+				<th>Username</th>
+				<th>Email</th>
+				<th>Password</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Tolani</td>
+				<td>tolani@yahoo.com</td>
+				<td>mmigfu</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Tolani</td>
+				<td>tolani@yahoo.com</td>
+				<td>mmigfu</td>
+			</tr>
+		</table>
+	</div>
+		<script>
+				document.getElementById("loginbutton").onclick=function(){
+					//get all of the details
+						var username= document.getElementById("username").value;
+						var email= document.getElementById("email") .value;
+						var password= document.getElementById("password") .value ;
+						
+						//create the tds
+						var td1 = document.createElement("td");
+						td1.innerHTML =3;
+						var td2 = document.createElement("td");
+						td2.innerHTML =username;
+						var td3 = document.createElement("td");
+						td3.innerHTML =email;
+						var td4 = document.createElement("td");
+						td4.innerHTML =email;
+
+						//create the tr
+						var tr = document.createElement("tr");
+						tr.appendChild(td1);
+						tr.appendChild(td2);
+						tr.appendChild(td3);
+						tr.appendChild(td4);
+
+						//add the tr to the table
+
+						document.getElementById("mytable").appendChild(tr);
+
+						//clear the input
+						document.getElementById("username").value="";
+						document.getElementById("email").value="";
+						document.getElementById("password").value="";
+
+						}
+		</script>
+
+</body>
+</html>
